@@ -1,0 +1,24 @@
+.bread-crumbs {
+  margin-bottom: 48px;
+  font-size: 14px;
+}
+.bread-crumbs a {
+  position: relative;
+  padding-right: 19px;
+  color: #008fc7;
+
+  &:after {
+    position: absolute;
+    top: 6px;
+    right: 7px;
+    width: 5px;
+    height: 5px;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    transform: rotate(-45deg);
+    content: '';
+  }
+}
+.bread-crumbs span {
+  color: #b2b2b2;
+}

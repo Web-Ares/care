@@ -1,6 +1,7 @@
 .site {
   position: relative;
   min-height: 100%;
+  @include  main-font1;
   background-color: $site-back;
 
   &:after{
@@ -9,9 +10,36 @@
     content: '';
   }
 
-  &-centered{
+  &__centered{
     max-width: 960px;
     margin: 0 auto;
+  }
+
+  &__aside{
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    text-align: left;
+  }
+
+  &__content{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 16px 15px 50px;
+    text-align: justify;
+
+    &>div{
+      display: inline-block;
+      vertical-align: top;
+      width: 100%;
+      text-align: left;
+    }
+
+    &:after{
+      display: inline-block;
+      width: 100%;
+      content: "";
+    }
   }
 
   &__footer{
@@ -42,7 +70,18 @@
 }
 @media (min-width: $tablet-landscape) {
   .site {
-
+    &__content{
+      padding: 16px 0 152px;
+    }
+    &__content>div{
+      width: 713px;
+    }
+    &__content>div p{
+      padding-right:30px;
+    }
+    &__aside{
+      width: 220px;
+    }
   }
 }
 @media (min-width: $desktop) {
