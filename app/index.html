@@ -9,6 +9,7 @@
 
     <title>Title</title>
 
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/index.css">
 
 </head>
@@ -79,34 +80,89 @@
 
         <!-- promo -->
         <div class="promo">
-            Заботой о ближнемсделаем жизнь лучше!
-            Помощь детям-сиротам
-            Помощь инвалидам разного возраста
-            Помощь семьям, попавшим в сложную жизненную ситуацию
-            Помощь одиноким, престарелым людям
+
+            <!-- swiper-container -->
+            <div class="promo__swiper swiper-container">
+
+                <!-- swiper-wrapper -->
+                <div class="swiper-wrapper">
+
+                    <!-- promo__item -->
+                    <div class="promo__item swiper-slide">
+                        <img src="pic/slide-1.jpg" alt="img"/>
+
+                        <!-- promo__content -->
+                        <div class="promo__content">
+                            <p>Заботой о ближнем сделаем жизнь лучше!</p>
+                            <p>Помощь детям-сиротам</p>
+                            <p>Помощь инвалидам разного возраста</p>
+                            <p>Помощь семьям, попавшим в сложную жизненную ситуацию</p>
+                            <p>Помощь одиноким, престарелым людям</p>
+                        </div>
+                        <!-- /promo__content -->
+
+                    </div>
+                    <!-- /promo__item -->
+
+                    <!-- promo__item -->
+                    <div class="promo__item swiper-slide">
+                        <img src="pic/slide-2.jpg" alt="img"/>
+
+                        <!-- promo__content -->
+                        <div class="promo__content">
+                            <p>Заботой о ближнем сделаем жизнь лучше!</p>
+                            <p>Помощь детям-сиротам</p>
+                            <p>Помощь инвалидам разного возраста</p>
+                            <p>Помощь семьям, попавшим в сложную жизненную ситуацию</p>
+                            <p>Помощь одиноким, престарелым людям</p>
+                        </div>
+                        <!-- /promo__content -->
+
+                    </div>
+                    <!-- /promo__item -->
+
+                    <!-- promo__item -->
+                    <div class="promo__item swiper-slide">
+                        <img src="pic/slide-3.jpg" alt="img"/>
+
+                        <!-- promo__content -->
+                        <div class="promo__content">
+                            <p>Заботой о ближнем сделаем жизнь лучше!</p>
+                            <p>Помощь детям-сиротам</p>
+                            <p>Помощь инвалидам разного возраста</p>
+                            <p>Помощь семьям, попавшим в сложную жизненную ситуацию</p>
+                            <p>Помощь одиноким, престарелым людям</p>
+                        </div>
+                        <!-- /promo__content -->
+
+                    </div>
+                    <!-- /promo__item -->
+
+                </div>
+                <!-- /swiper-wrapper -->
+
+            </div>
+            <!-- /swiper-container -->
+
         </div>
         <!-- /promo -->
 
         <!-- projects -->
-        <section class="projects">
+        <section class="projects site__centered">
 
-            <h2>проекты нуждающиеся в вашей помощи</h2>
+            <!-- projects -->
+            <h2 class="site__tile">проекты нуждающиеся в вашей помощи</h2>
+            <!-- projects -->
 
-            <!-- site__centered -->
-            <div class="site__centered">
+            <article class="projects__item">
+                <h3>Детский садик</h3>
+                Открытие двух точек аттракционов виртуальной реальности в г. Екатеринбург с дальнейшим расширением
 
-                <article class="projects__item">
-                    <h3>Детский садик</h3>
-                    Открытие двух точек аттракционов виртуальной реальности в г. Екатеринбург с дальнейшим расширением
+                Нужно: 200 000 РУБ
+                Собрано: 3 200 РУБ
 
-                    Нужно: 200 000 РУБ
-                    Собрано: 3 200 РУБ
-
-                    Хочу помочь
-                </article>
-
-            </div>
-            <!-- /site__centered -->
+                Хочу помочь
+            </article>
 
         </section>
         <!-- /projects -->
@@ -175,26 +231,8 @@
     </div>
     <!-- /site -->
 
-    <!-- popup -->
-    <div class="popup">
-
-        <!-- popup__wrap -->
-        <div class="popup__wrap">
-
-            <!-- popup__content -->
-            <div class="popup__content popup__text">
-
-            </div>
-            <!-- /popup__content -->
-
-        </div>
-        <!-- /popup__wrap -->
-
-    </div>
-    <!-- /popup -->
-
-
     <script src="js/vendors/jquery-2.2.1.min.js"></script>
+    <script src="js/vendors/swiper.jquery.min.js"></script>
     <script src="js/index.min.js"></script>
 </body>
 </html>

@@ -10,6 +10,17 @@
     content: '';
   }
 
+  &__header{
+    height: 174px;
+
+    &-layout{
+      position: relative;
+      width: 960px;
+      margin: 0 auto;
+    }
+
+  }
+
   &__centered{
     max-width: 960px;
     margin: 0 auto;
