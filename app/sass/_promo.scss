@@ -1,0 +1,18 @@
+.promo{
+  height: 320px;
+  background-color: $promo-back;
+
+  &__swiper{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 960px;
+  }
+
+  &__content{
+   position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+}
