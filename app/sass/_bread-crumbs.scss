@@ -1,5 +1,5 @@
 .bread-crumbs {
-  margin-bottom: 48px;
+  margin-bottom: 20px;
   font-size: 14px;
 }
 .bread-crumbs a {
@@ -21,4 +21,10 @@
 }
 .bread-crumbs span {
   color: #b2b2b2;
+}
+
+@media (min-width: $tablet-landscape) {
+  .bread-crumbs {
+    margin-bottom: 48px;
+  }
 }

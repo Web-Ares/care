@@ -18,8 +18,7 @@
   border-radius: 5px;
 }
 .text-wrap h2{
-  margin-bottom: 41px;
-  padding-right: 493px;
+  margin-bottom: 10px;
   font-size: 28px;
   text-transform: uppercase;
   line-height: 40px;
@@ -35,6 +34,7 @@
 .text-wrap p{
   margin-bottom: 40px;
   letter-spacing: -.2px;
+  text-align: left;
 }
 .text-wrap a{
   color: $text-wrap-a;
@@ -43,4 +43,11 @@
 .text-wrap a:hover{
   color: $text-wrap-a-hover;
   text-decoration: underline;
+}
+
+@media (min-width: $tablet-landscape) {
+  .text-wrap h2 {
+    padding-right: 493px;
+    margin-bottom: 41px;
+  }
 }
