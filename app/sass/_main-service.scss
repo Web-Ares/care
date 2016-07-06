@@ -1,16 +1,25 @@
 .main-service{
-  width: 430px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 290px;
+  margin: 0 auto;
 }
 
-@media (min-width: $tablet-landscape) {
+@media (min-width: $tablet-portrait) {
 
   .main-service{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: absolute;
     top: 35px;
-    right: 0;
+    right: 15px;
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .main-service{
+    width: 430px;
   }
 
 }

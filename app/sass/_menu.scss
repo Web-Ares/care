@@ -4,10 +4,19 @@
   letter-spacing: 2.7px;
 
   &_header{
-    position: absolute;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 5;
+    background-color: rgba(255,255,255,.8);
 
     li {
       position: relative;
@@ -33,34 +42,27 @@
         content: '';
       }
 
-    }
+      &.active{
+        color: #8ac842;
 
-    > ul > li:hover > a{
-      color: $menu-color-hover;
+        &.menu__item_content:after{
+          border-color: #8ac842;
+        }
 
-      &:after{
-        border-color: $menu-color-hover;
       }
 
     }
 
     .menu__sum-menu{
-      position: absolute;
-      top: 100%;
+      display: none;
       min-width: 100%;
       padding: 9px 0 10px;
       background-color: #fff;
       white-space: nowrap;
       z-index: 2;
-      opacity: 0;
-      visibility: hidden;
       @include duoEvent(opacity, visibility);
 
       ul{
-        position: absolute;
-        top: 0;
-        left: 100%;
-        min-width: auto;
         padding: 0;
         background-color: #e6e6e6;
       }
@@ -72,21 +74,11 @@
         text-transform: none;
       }
 
-      ul li:hover{
-        background-color: #d4d4d4;
-      }
-
       li {
         @include oneEvent(background-color);
 
-        &:hover{
-          background-color: #e6e6e6;
-        }
-
         .menu__item_content:after{
           top: 16px;
-          transform: rotate(-45deg);
-          -webkit-transform: rotate(-45deg);
         }
 
       }
@@ -101,15 +93,6 @@
         justify-content: flex-start;
       }
 
-      a:hover{
-        color: #000;
-      }
-
-    }
-
-    li:hover > .menu__sum-menu{
-      opacity: 1;
-      visibility: visible;
     }
 
   }
@@ -139,12 +122,16 @@
 
 }
 
+.menu_visible{
+  opacity: 1;
+  visibility: visible;
+}
+
 .menu-btn{
   opacity: 1;
   visibility: visible;
   position: relative;
   width: 33px;
-  margin-right: 17px;
   padding: 9px 0;
   z-index: 10;
   cursor: pointer;
@@ -205,6 +192,73 @@
 @media (min-width: $desktop) {
 
   .menu{
+
+    &_header{
+      position: absolute;
+      top: auto;
+      opacity: 1;
+      visibility: visible;
+      background-color: transparent;
+
+      > ul > li:hover > a{
+        color: $menu-color-hover;
+
+        &:after{
+          border-color: $menu-color-hover;
+        }
+
+      }
+
+      .menu__sum-menu{
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 100%;
+        opacity: 0;
+        visibility: hidden;
+
+        ul {
+          position: absolute;
+          top: 0;
+          left: 100%;
+          min-width: auto;
+
+          a{
+            text-transform: none;
+          }
+
+        }
+
+        ul li:hover{
+          background-color: #d4d4d4;
+        }
+
+        li {
+
+          .menu__item_content:after{
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+          }
+
+          a:hover{
+            color: #000;
+          }
+
+          &:hover{
+            background-color: #e6e6e6;
+          }
+
+        }
+
+      }
+
+      li:hover > .menu__sum-menu{
+        opacity: 1;
+        visibility: visible;
+      }
+
+    }
 
     &_footer {
       position: absolute;
