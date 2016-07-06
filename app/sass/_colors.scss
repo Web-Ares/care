@@ -3,6 +3,11 @@ $site-back: #f2f2f2;
 $footer-back: #4d4d4d;
 /*---------- /site ---------*/
 
+/*---------- menu ----------*/
+$menu-color: #000;
+$menu-color-hover: #8ac842;
+/*---------- /menu ---------*/
+
 /*---------- popup ----------*/
 $popup-back: rgba( 0, 0, 0, .5 );
 $popup-close-back: rgba( 255, 255, 255, 1 );
@@ -26,16 +31,14 @@ $nice-checkbox-color: #000;
 /*---------- /nice-checkbox ---------*/
 
 /*---------- btn ----------*/
-$btn-back: #ff0;
-$btn-back-hover: #ffa;
-$btn-back-active: #000;
-$btn-color: #000;
-$btn-color-active: #ff0;
+$btn-back: #88ca36;
+$btn-back-hover: #98d150;
+$btn-back-active: #98d150;
+$btn-color: #fff;
 
-$btn-2-back: #f00;
-$btn-2-back-hover: #f0a;
-$btn-2-back-active: #000;
-$btn-2-color-active: #f0a;
+$btn-2-back: #ff6242;
+$btn-2-back-hover: #ff7b60;
+$btn-2-back-active: #ff7b60;
 /*---------- /btn ---------*/
 
 /*---------- text-wrap a ---------*/

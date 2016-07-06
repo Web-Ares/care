@@ -1,0 +1,113 @@
+.projects{
+  margin-bottom: 47px;
+
+  &__title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 38px;
+  }
+
+  &__wrap{
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-left: -27px;
+  }
+
+  &__item{
+    position: relative;
+    width: 220px;
+    margin-left: 27px;
+    margin-bottom: 30px;
+    padding-bottom: 141px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0,0,0,.1);
+    overflow: hidden;
+  }
+
+  &__content{
+    padding: 15px 12px 12px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__control{
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+  }
+
+  &__topic{
+    margin-bottom: 11px;
+    color: #008fc7;
+    font-size: 16px;
+    font-weight: 500;
+
+    a{
+      color: inherit;
+      @include oneEvent(color);
+
+      &:hover{
+        color: #89ca36;
+      }
+
+    }
+
+  }
+
+  &__text{
+    margin-bottom: 26px;
+  }
+
+  &__needs{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+    line-height: 20px;
+
+    dt{
+      width: 50%;
+      color: #b2b2b2;
+    }
+
+    dd{
+      width: 50%;
+      font-size: 16px;
+      text-align: right;
+
+      span{
+        color: #b2b2b2;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+
+    }
+
+  }
+
+  &__status{
+    width: 100%;
+    height: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #ededed;
+    overflow: hidden;
+
+    span{
+      display: block;
+      height: inherit;
+      background-color: #8ac842;
+    }
+
+  }
+
+}

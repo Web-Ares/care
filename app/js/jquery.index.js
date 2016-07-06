@@ -15,6 +15,7 @@ $(function(){
         //private properties
         var _obj = obj,
             _promoSlider = _obj.find( '.promo__swiper'),
+            _promoPaginationSlider = _obj.find( '.promo-pagination'),
             _slider;
 
 
@@ -25,7 +26,9 @@ $(function(){
                     autoplay: 4000,
                     speed: 500,
                     effect : 'fade',
-                    loop: true
+                    loop: true,
+                    paginationClickable: true,
+                    pagination: _promoPaginationSlider
                 } );
 
             },

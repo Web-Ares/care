@@ -16,6 +16,7 @@
     &-layout{
       position: relative;
       width: 960px;
+      height: inherit;
       margin: 0 auto;
     }
 
@@ -24,6 +25,40 @@
   &__centered{
     max-width: 960px;
     margin: 0 auto;
+  }
+
+  &__title{
+    font-size: 20px!important;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  &__more-link{
+    color: #008fc7;
+    letter-spacing: -1.2px;
+    text-decoration: underline;
+
+    &:after{
+      display: inline-block;
+      vertical-align: middle;
+      width: 3px;
+      height: 3px;
+      margin-left: 5px;
+      border-color: #008fc7;
+      border-width: 1px;
+      border-bottom-style: solid;
+      border-right-style: solid;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      content: '';
+      @include oneEvent(transform);
+    }
+
+    &:hover{
+      text-decoration: none;
+    }
+
   }
 
   &__aside{
@@ -62,6 +97,7 @@
     background-color: $footer-back;
 
     &-layout{
+      position: relative;
       max-width: 960px;
       margin: 0 auto;
     }

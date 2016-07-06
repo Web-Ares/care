@@ -1,3 +1,140 @@
 .menu{
+  margin: 0 -28px;
   font-size: 13px;
+  letter-spacing: 2.7px;
+
+  &_header{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__footer{
+    display: flex;
+
+    li .menu__item {
+      color: #fff;
+
+      &:hover{
+        color: #b2b2b2;
+      }
+
+    }
+
+  }
+
+  li {
+    position: relative;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 0 29px;
+    color: $menu-color;
+    font-weight: 500;
+    @include oneEvent(color);
+
+    &_content:after{
+      position: absolute;
+      top: 25px;
+      right: 18px;
+      width: 5px;
+      height: 5px;
+      border-color: #000;
+      border-width: 1px;
+      border-bottom-style: solid;
+      border-right-style: solid;
+      transform: rotate(45deg);
+      @include oneEvent(border-color);
+      content: '';
+    }
+
+  }
+
+  > ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  > ul > li:hover > a{
+    color: $menu-color-hover;
+
+    &:after{
+      border-color: $menu-color-hover;
+    }
+
+  }
+
+  &__sum-menu{
+    position: absolute;
+    top: 100%;
+    min-width: 100%;
+    padding: 9px 0 10px;
+    background-color: #fff;
+    white-space: nowrap;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    @include duoEvent(opacity, visibility);
+  }
+
+  li:hover > .menu__sum-menu{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__sum-menu li {
+    @include oneEvent(background-color);
+
+    &:hover{
+      background-color: #e6e6e6;
+    }
+
+    .menu__item_content:after{
+      top: 16px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+
+  }
+
+  &__sum-menu a{
+    height: 38px;
+    font-weight: 400;
+    justify-content: flex-start;
+  }
+
+  &__sum-menu a:hover{
+    color: #000;
+  }
+
+  &__sum-menu > li > a{
+    text-transform: uppercase;
+  }
+
+  &__sum-menu ul{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: auto;
+    padding: 0;
+    background-color: #e6e6e6;
+  }
+
+  &__sum-menu ul li:hover{
+    background-color: #d4d4d4;
+  }
+
+  &__sum-menu ul a{
+    padding: 0 22px;
+    font-size: 14px;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
 }

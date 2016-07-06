@@ -15,6 +15,15 @@
   }
 }
 
+@mixin oneEvent($event) {
+  transition: $event .3s ease;
+  -webkit-transition: $event .3s ease;
+}
+@mixin duoEvent($first-event, $second-event) {
+  transition: $first-event .3s ease, $second-event .3s ease;
+  -webkit-transition: $first-event .3s ease, $second-event .3s ease;
+}
+
 @mixin absoluteCenter() {
   position: absolute;
   top: 50%;

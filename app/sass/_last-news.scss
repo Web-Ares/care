@@ -1,0 +1,53 @@
+.last-news{
+  margin-bottom: 31px;
+
+  &__title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 38px;
+  }
+
+  &__wrap{
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-left: -27px;
+  }
+
+  &__item{
+    position: relative;
+    width: 220px;
+    margin-left: 27px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 24px;
+    overflow: hidden;
+  }
+
+  &__data{
+    display: block;
+    margin-bottom: 10px;
+    color: #999;
+  }
+
+  &__topic{
+    margin-bottom: 7px;
+    color: #008fc7;
+    font-weight: 300;
+
+    a{
+      color: inherit;
+      @include oneEvent(color);
+
+      &:hover{
+        color: #89ca36;
+        text-decoration: underline;
+      }
+
+    }
+
+  }
+
+}

@@ -1,36 +1,65 @@
 .btn {
-  border: none;
-  height: 50px;
-  padding: 0 10px;
-  color: $btn-color;
   display: flex;
-  text-align: left;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 38px;
+  width: 195px;
+  border: none;
+  border-radius: 5px;
+  background-color: $btn-back;
+  color: $btn-color;
   font-size: 14px;
-  background: $btn-back;
+  @include oneEvent(background-color);
 
   &:hover {
-    background: $btn-back-hover;
+    background-color: $btn-back-hover;
   }
 
   &:active {
-    color: $btn-color-active;
-    background: $btn-back-active;
+    background-color: $btn-back-active;
+  }
+
+  &_1 {
+    width: 210px;
+    height: 54px;
+    font-size: 13px;
+    font-weight: 500;
+
+    span:before{
+      display: inline-block;
+      vertical-align: middle;
+      width: 26px;
+      height: 26px;
+      margin-right: 6px;
+      background: url('../img/icons-header.png') no-repeat 0 0;
+      content: '';
+    }
+
   }
 
   &_2 {
-    width: 150px;
-    height: 40px;
+    width: 210px;
+    height: 54px;
     background: $btn-2-back;
+    font-size: 13px;
+    font-weight: 500;
+
+    span:before{
+      display: inline-block;
+      vertical-align: middle;
+      width: 26px;
+      height: 26px;
+      margin-right: 6px;
+      background: url('../img/icons-header.png') no-repeat 0 -43px;
+      content: '';
+    }
 
     &:hover {
       background: $btn-2-back-hover;
     }
 
     &:active {
-      color: $btn-2-color-active;
       background: $btn-2-back-active;
     }
   }

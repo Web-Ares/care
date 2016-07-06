@@ -1,10 +1,15 @@
 .logo{
   position: absolute;
-  top: 26px;
-  left: 7px;
+  top: 27px;
+  left: 8px;
 
   img{
-    width: 82px;
+    width: 100%;
+  }
+
+  &_footer{
+    top: 25px;
+    left: 0;
   }
 
 }
