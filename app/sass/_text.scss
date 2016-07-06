@@ -4,7 +4,6 @@
 }
 .text-wrap__time{
   display: block;
-  margin-top: -30px;
   margin-bottom: 21px;
   color: #b2b2b2;
 }
@@ -80,5 +79,8 @@
   .text-wrap h2 {
     padding-right: 480px;
     margin-bottom: 41px;
+  }
+  .text-wrap__time {
+    margin-top: -30px;
   }
 }
