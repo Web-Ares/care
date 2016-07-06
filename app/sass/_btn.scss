@@ -21,17 +21,17 @@
   }
 
   &_1 {
-    width: 210px;
+    width: 120px;
     height: 54px;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 500;
 
     span:before{
-      display: inline-block;
+      display: block;
       vertical-align: middle;
       width: 26px;
       height: 26px;
-      margin-right: 6px;
+      margin: 0 auto 5px;
       background: url('../img/icons-header.png') no-repeat 0 0;
       content: '';
     }
@@ -39,18 +39,18 @@
   }
 
   &_2 {
-    width: 210px;
+    width: 120px;
     height: 54px;
     background: $btn-2-back;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 500;
 
     span:before{
-      display: inline-block;
+      display: block;
       vertical-align: middle;
       width: 26px;
       height: 26px;
-      margin-right: 6px;
+      margin: 0 auto 5px;
       background: url('../img/icons-header.png') no-repeat 0 -43px;
       content: '';
     }
@@ -62,6 +62,36 @@
     &:active {
       background: $btn-2-back-active;
     }
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .btn {
+
+    &_1 {
+      width: 210px;
+
+      span:before{
+        display: inline-block;
+        margin-right: 6px;
+        font-size: 13px;
+      }
+
+    }
+
+    &_2 {
+      width: 210px;
+
+      span:before{
+        display: inline-block;
+        margin-right: 6px;
+        font-size: 13px;
+      }
+
+    }
+
   }
 
 }
