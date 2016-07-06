@@ -1,31 +1,19 @@
 .projects{
   margin-bottom: 47px;
 
-  &__title{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    margin-bottom: 38px;
-  }
-
-  &__wrap{
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
-    margin-left: -27px;
-  }
-
   &__item{
     position: relative;
     width: 220px;
-    margin-left: 27px;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
     padding-bottom: 141px;
     border-radius: 5px;
     background-color: #fff;
     box-shadow: 0 0 8px rgba(0,0,0,.1);
     overflow: hidden;
+  }
+
+  &__title{
+    margin-bottom: 38px;
   }
 
   &__content{
@@ -106,6 +94,49 @@
       display: block;
       height: inherit;
       background-color: #8ac842;
+    }
+
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .projects{
+
+    &__wrap{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-items: stretch;
+      margin-left: -22px;
+    }
+
+    &__title{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    &__item{
+      margin-left: 21px;
+    }
+
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .projects{
+
+    &__wrap{
+      margin-left: -28px;
+    }
+
+    &__item{
+      margin-left: 27px;
     }
 
   }

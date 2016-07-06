@@ -1,7 +1,8 @@
 .logo{
-  position: absolute;
-  top: 27px;
-  left: 8px;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  max-width: 368px;
 
   img{
     width: 100%;
@@ -10,6 +11,24 @@
   &_footer{
     top: 25px;
     left: 0;
+    max-width: 64px;
+    margin: 0 auto 25px;
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .logo {
+    position: absolute;
+    top: 27px;
+    left: 8px;
+    margin-bottom: 0;
+
+    &_footer{
+      margin-bottom: 0;
+    }
+
   }
 
 }

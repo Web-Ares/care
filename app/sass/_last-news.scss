@@ -2,24 +2,11 @@
   margin-bottom: 31px;
 
   &__title{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
     margin-bottom: 38px;
-  }
-
-  &__wrap{
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
-    margin-left: -27px;
   }
 
   &__item{
     position: relative;
-    width: 220px;
-    margin-left: 27px;
     margin-bottom: 30px;
     font-size: 14px;
     line-height: 24px;
@@ -46,6 +33,46 @@
         text-decoration: underline;
       }
 
+    }
+
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .last-news{
+
+    &__title{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    &__wrap{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-items: stretch;
+      margin-left: -28px;
+    }
+
+    &__item{
+      width: 45%;
+      margin-left: 27px;
+    }
+
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .last-news{
+
+    &__item{
+      width: 220px;
     }
 
   }

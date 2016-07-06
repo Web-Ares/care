@@ -1,5 +1,5 @@
 .about-us{
-  margin-bottom: 104px;
+  margin-bottom: 35px;
 
   p {
     margin-bottom: 8px;
@@ -11,6 +11,14 @@
     font-weight: 300;
     letter-spacing: 4px;
     text-transform: uppercase;
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .about-us {
+    margin-bottom: 104px;
   }
 
 }

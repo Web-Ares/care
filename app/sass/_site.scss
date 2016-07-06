@@ -1,23 +1,19 @@
 .site {
   position: relative;
+  min-width: 320px;
   min-height: 100%;
   @include  main-font1;
   background-color: $site-back;
-
-  &:after{
-    display: block;
-    height: 110px;
-    content: '';
-  }
+  overflow: hidden;
 
   &__header{
-    height: 174px;
 
     &-layout{
       position: relative;
-      width: 960px;
+      max-width: 960px;
       height: inherit;
       margin: 0 auto;
+      padding: 15px;
     }
 
   }
@@ -25,9 +21,11 @@
   &__centered{
     max-width: 960px;
     margin: 0 auto;
+    padding: 0 15px;
   }
 
   &__title{
+    margin-bottom: 10px;
     font-size: 20px!important;
     font-weight: 300;
     letter-spacing: 4px;
@@ -38,6 +36,7 @@
     color: #008fc7;
     letter-spacing: -1.2px;
     text-decoration: underline;
+    white-space: nowrap;
 
     &:after{
       display: inline-block;
@@ -89,51 +88,92 @@
   }
 
   &__footer{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 110px;
     background-color: $footer-back;
 
     &-layout{
       position: relative;
       max-width: 960px;
       margin: 0 auto;
+      padding: 15px;
     }
 
   }
 
 }
-@media (min-width: $phone-landscape) {
-  .site {
 
-  }
-}
 @media (min-width: $tablet-portrait) {
+
   .site {
 
+    &__title {
+      margin-bottom: 0;
+    }
+
   }
+
 }
+
 @media (min-width: $tablet-landscape) {
+
   .site {
+
     &__content{
       padding: 16px 0 152px;
     }
+
     &__content>div{
       width: 713px;
     }
+
     &__content>div p{
       padding-right:30px;
     }
+
     &__aside{
       width: 220px;
     }
-  }
-}
-@media (min-width: $desktop) {
-  .site {
 
   }
+
+}
+
+@media (min-width: $desktop) {
+
+  .site {
+
+    &:after{
+      display: block;
+      height: 110px;
+      content: '';
+    }
+
+    &__header{
+      height: 174px;
+
+      &-layout{
+        padding: 0;
+      }
+
+    }
+
+    &__centered{
+      padding: 0;
+    }
+
+    &__footer{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 110px;
+
+      &-layout{
+        padding: 0;
+      }
+
+    }
+
+  }
+
 }
 

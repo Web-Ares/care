@@ -1,9 +1,16 @@
 .main-service{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: 35px;
-  right: 0;
   width: 430px;
+}
+
+@media (min-width: $tablet-landscape) {
+
+  .main-service{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 35px;
+    right: 0;
+  }
+
 }
