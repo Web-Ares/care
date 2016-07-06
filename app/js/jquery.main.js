@@ -15,6 +15,7 @@ $(function(){
         //private properties
         var _obj = obj,
             _menu = $( '.menu' ),
+            _subBtn = $( '.menu__item_content' ),
             _window = $( window );
 
         //private methods
@@ -43,18 +44,34 @@ $(function(){
                         }
                     }
                 } ),
-                    _window.on( {
-                        'resize': function() {
+                _subBtn.on( {
+                        'click': function() {
 
-                            if ( _menu.height() - 10 > _window.height() && _obj.hasClass( 'menu-btn_close' ) ) {
-                                _initContentScroll();
-                                $( _menu ).getNiceScroll().show();
+                            var curSubMenu = $( this ).next( '.menu__sum-menu' );
+                            if ( curSubMenu.css('display') == 'none' ) {
+                                $( this).addClass('active');
+                                curSubMenu.slideDown(300);
+                                $( _menu).getNiceScroll().resize();
                             } else {
-                                $( _menu ).getNiceScroll().hide();
+                                $( this).removeClass('active');
+                                curSubMenu.slideUp(300);
+                                $( _menu).getNiceScroll().resize()
                             }
 
                         }
-                    } )
+                    } ),
+                _window.on( {
+                    'resize': function() {
+
+                        if ( _menu.height() - 10 > _window.height() && _obj.hasClass( 'menu-btn_close' ) ) {
+                            _initContentScroll();
+                            $( _menu ).getNiceScroll().show();
+                        } else {
+                            $( _menu ).getNiceScroll().hide();
+                        }
+
+                    }
+                } )
 
             },
             _initContentScroll = function() {
