@@ -51,6 +51,28 @@
     margin-bottom: 26px;
   }
 
+  &__percent{
+    padding-bottom: 16px;
+    margin-bottom: 15px;
+    border-bottom: 1px dotted #000;
+    text-align: right;
+    color: #b2b2b2;
+  }
+  &__sum{
+    margin-bottom: 10px;
+  }
+  &__sum input{
+    width: 157px;
+    height: 37px;
+    padding-left: 13px;
+    margin-left: 3px;
+    border: 1px solid #b2b2b2;
+    border-radius: 5px;
+  }
+  &__sum label{
+    color: #b2b2b2;
+    padding-left: 8px;
+  }
   &__needs{
     display: flex;
     flex-flow: row wrap;

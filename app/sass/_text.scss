@@ -21,8 +21,8 @@
   margin-bottom: 10px;
   font-size: 28px;
   text-transform: uppercase;
-  line-height: 40px;
-  letter-spacing: 2.8px;
+  line-height: 36px;
+  letter-spacing: 2px;
   text-align: left;
 }
 .text-wrap h3{
@@ -57,7 +57,17 @@
    margin-left: 0;
    padding-bottom:0;
 }
+.text-wrap .projects__content{
+  padding: 18px 12px 12px 10px;
+}
+.text-wrap .projects__status{
+  margin-bottom: 4px;
+}
+.text-wrap .projects__item p{
+  margin-bottom: 17px;
+}
 .text-wrap .projects__topic{
+  margin-bottom: 21px;
   font-weight: 300;
   color: #000;
   font-size: 14px;
@@ -68,7 +78,7 @@
 
 @media (min-width: $tablet-landscape) {
   .text-wrap h2 {
-    padding-right: 493px;
+    padding-right: 480px;
     margin-bottom: 41px;
   }
 }
